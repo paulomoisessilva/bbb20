@@ -10,3 +10,15 @@ a.navbar-brand{
 .bg-orange{
     background-color: orange;
 }
+
+img{
+    width: 300px !important;
+}
+
+p{
+    text-align: justify;
+}
+hr{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
