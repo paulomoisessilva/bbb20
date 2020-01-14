@@ -29,18 +29,12 @@ hr{
 }
 
 .imagem-participante{
-    width: 100%;
+    width: 200px;
     height: 300px;
     overflow: hidden;
     border-radius: 15px;
 }
 
-.img1{
-    max-width: 100% !important;
-    display: block !important; 
-}
-
-.img2{
-    max-height: 100% !important;
-    display: block !important; 
+.imagem-participante>img{
+    width: 200px !important;
 }
