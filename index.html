@@ -25,6 +25,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <script src="inicio.js"></script>
@@ -34,6 +35,80 @@
 <body>
   <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-orange">
   </nav>
+
+  <div id="concorrentes" class="row">
+    <div class="col row p-5">
+      <div class="col-md-3 col-12">
+        <div class="imagem-participante shadow">
+          <img src="https://static1.purepeople.com.br/articles/4/21/59/24/@/2478754-ana-paula-declarou-que-gleice-nao-parece-950x0-2.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-9 col-12">
+        <h2>Gleice Damasceno</h2>
+        <h1>83%</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="grafico1">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    var datas = ['14/01/2020 19h', '15/01/2020 00h', '15/01/2020 19h', '16/01/2020 19h', '16/01/2020 00h', '17/01/2020 19h']
+    var dados = [{
+      label: 'Fulano',
+      data: [10, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        'rgba(141,182,75, 0.2)'
+      ],
+      borderColor: [
+        'rgba(141,182,75, 1)'
+      ],
+      borderWidth: 1
+    }, {
+      label: 'Ciclano',
+      data: [16, 29, 13, 25, 22, 13],
+      backgroundColor: [
+        'rgba(66,179,198, 0.2)'
+      ],
+      borderColor: [
+        'rgba(66,179,198, 1)'
+      ],
+      borderWidth: 1
+    }]
+
+    dados.push({
+      label: 'Beltrano',
+      data: [66, 67, 68, 69, 66, 65],
+      backgroundColor: [
+        'rgba(228,109,103, 0.2)'
+      ],
+      borderColor: [
+        'rgba(228,109,103, 1)'
+      ],
+      borderWidth: 1
+    })
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: datas,
+        datasets: dados
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: false
+            }
+          }]
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
