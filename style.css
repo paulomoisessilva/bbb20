@@ -38,3 +38,7 @@ hr{
 .imagem-participante>img{
     width: 200px !important;
 }
+
+.row{
+    margin: 0 !important;
+}
