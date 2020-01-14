@@ -1,0 +1,3 @@
+$(function(){
+    $("#titulo").append(" - Estatísticas")
+})
