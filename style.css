@@ -24,8 +24,8 @@ hr{
 }
 
 #grafico1{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 300px;
 }
 
 .imagem-participante{
@@ -41,4 +41,10 @@ hr{
 
 .row{
     margin: 0 !important;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }

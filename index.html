@@ -40,78 +40,49 @@
     <div class="col row p-5 text-center center-block">
       <div class="col-12 d-flex justify-content-center">
         <div class="imagem-participante shadow">
-          <img src="/assets/Gleice.jpg" alt="">
+          <img src="/assets/loadingImage.jpg" alt="">
         </div>
       </div>
       <div class="col-12">
-        <h2>Gleice Damasceno</h2>
-        <h1>83%</h1>
+        <h2>Carregando ...</h2>
+        <h1>0%</h1>
       </div>
     </div>
 
     <div class="col row p-5 text-center center-block">
       <div class="col-12 d-flex justify-content-center">
         <div class="imagem-participante shadow">
-          <img src="/assets/Gleice.jpg" alt="">
+          <img src="/assets/loadingImage.jpg" alt="">
         </div>
       </div>
       <div class="col-12">
-        <h2>Gleice Damasceno</h2>
-        <h1>83%</h1>
+        <h2>Carregando ...</h2>
+        <h1>0%</h1>
       </div>
     </div>
 
   </div>
 
   
-  <div class="row">
-    <div id="grafico1">
+  <div class="row d-flex justify-content-center">
+    <div id="grafico1" class="col-12 col-md-4">
       <canvas id="myChart"></canvas>
     </div>
+    <div class="col-12 col-md-4">
+      <a class="twitter-timeline" data-width="500" data-height="300" href="https://twitter.com/pmsilvapm2?ref_src=twsrc%5Etfw">Tweets by pmsilvapm2</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
-
+  </div>
+  <div id="horario" class="footer">
+    <strong>Última Atualização:</strong> carregando...
+  </div>
   <script>
-    var datas = ['14/01/2020 19h', '15/01/2020 00h', '15/01/2020 19h', '16/01/2020 19h', '16/01/2020 00h', '17/01/2020 19h']
-    var dados = [{
-      label: 'Fulano',
-      data: [10, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        'rgba(141,182,75, 0.2)'
-      ],
-      borderColor: [
-        'rgba(141,182,75, 1)'
-      ],
-      borderWidth: 1
-    }, {
-      label: 'Ciclano',
-      data: [16, 29, 13, 25, 22, 13],
-      backgroundColor: [
-        'rgba(66,179,198, 0.2)'
-      ],
-      borderColor: [
-        'rgba(66,179,198, 1)'
-      ],
-      borderWidth: 1
-    }]
-
-    dados.push({
-      label: 'Beltrano',
-      data: [66, 67, 68, 69, 66, 65],
-      backgroundColor: [
-        'rgba(228,109,103, 0.2)'
-      ],
-      borderColor: [
-        'rgba(228,109,103, 1)'
-      ],
-      borderWidth: 1
-    })
-
+   
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: datas,
-        datasets: dados
+        datasets: dadosGrafico
       },
       options: {
         scales: {
