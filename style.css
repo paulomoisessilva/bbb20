@@ -4,6 +4,12 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+#nav{
+    position: sticky;
+    top:0;
+    right: 0;
+    z-index: 2;
+}
 a.navbar-brand{
     font-weight: 900;
 }
@@ -47,4 +53,19 @@ hr{
     position: fixed;
     right: 0;
     bottom: 0;
+}
+
+.card{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.icon-parceiros{
+    width: 35px !important;
+    height: auto;
+}
+
+.dados-baixados>p{
+    text-align: center !important;
+    font-size: large;
 }

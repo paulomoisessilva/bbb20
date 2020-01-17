@@ -1,6 +1,7 @@
+
 $(function(){
-    $("#titulo").append(" - Metodologia")
-    $("#metodologiaNav").addClass("active")
+    $("#titulo").append(" - Sobre Nós")
+    $("#sobreNos").addClass("active")
 })
 
 $(function () {
