@@ -95,10 +95,10 @@ function addCards(ultimoDado){
     var cardsText = ""
 
     cards.forEach(function(x){
-      var perc = (Math.round(x[2]*1000) / 10)+"%"
-      var med = (Math.round(x[3]*1000) / 10)+"%"
-      var max = (Math.round(x[5]*1000) / 10)+"%"
-      var min = (Math.round(x[4]*1000) / 10)+"%"
+      var perc = (Math.round(x[2]*10000) / 100)+"%"
+      var med = (Math.round(x[3]*10000) / 100)+"%"
+      var max = (Math.round(x[5]*10000) / 100)+"%"
+      var min = (Math.round(x[4]*10000) / 100)+"%"
       cardsText += `
       <div class="col row p-5 text-center center-block">
       <div class="col-12 d-flex justify-content-center">
