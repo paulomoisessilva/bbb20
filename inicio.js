@@ -79,7 +79,7 @@ function addCards(ultimoDado){
     cards.push(card2)
 
 
-    if(ud[8]){
+    if(ud[10]){
       var card3 = []
       card3.push(ud[8])
       card3.push(ud[9])
