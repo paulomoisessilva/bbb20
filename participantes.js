@@ -1,6 +1,7 @@
 //https://script.google.com/macros/s/AKfycbxEivVIGQ84tnZTYOcB6TeP4kdp522bzbQW9G1fL7WlfzrYKDM/exec
 $(function() {
     $("#titulo").append(" - Participantes")
+    $("#participantes").addClass("active")
 })
 
 
