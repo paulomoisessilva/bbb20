@@ -1,0 +1,37 @@
+.dotActive {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(46, 184, 46);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0 0 5px rgb(46, 184, 46);
+    -moz-box-shadow: 0 0 5px rgb(46, 184, 46);
+    box-shadow: 0 0 5px rgb(46, 184, 46);
+}
+
+.dotInactive {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(166, 166, 166);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0 0 5px rgb(166, 166, 166);
+    -moz-box-shadow: 0 0 5px rgb(166, 166, 166);
+    box-shadow: 0 0 5px rgb(166, 166, 166);
+}
+
+.Camarote {
+    -webkit-box-shadow: 0 0 15px rgb(0, 122, 204);
+    -moz-box-shadow: 0 0 15px rgb(0, 122, 204);
+    box-shadow: 0 0 15px rgb(0, 122, 204);
+    margin: 15px !important;
+    border-radius: 15px;
+}
+
+.Pipoca {
+    -webkit-box-shadow: 0 0 15px rgb(128, 0, 255);
+    -moz-box-shadow: 0 0 15px rgb(128, 0, 255);
+    box-shadow: 0 0 15px rgb(128, 0, 255);
+    margin: 15px !important;
+    border-radius: 15px;
+}
