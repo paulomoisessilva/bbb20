@@ -12,12 +12,12 @@
 .dotInactive {
     height: 25px;
     width: 25px;
-    background-color: rgb(166, 166, 166);
+    background-color: rgb(255, 0, 0);
     border-radius: 50%;
     display: inline-block;
-    -webkit-box-shadow: 0 0 5px rgb(166, 166, 166);
-    -moz-box-shadow: 0 0 5px rgb(166, 166, 166);
-    box-shadow: 0 0 5px rgb(166, 166, 166);
+    -webkit-box-shadow: 0 0 5px rgb(255, 0, 0);
+    -moz-box-shadow: 0 0 5px rgb(255, 0, 0);
+    box-shadow: 0 0 5px rgb(255, 0, 0);
 }
 
 .Camarote {
