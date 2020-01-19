@@ -11,6 +11,10 @@ var sobreNos = `<li class="nav-item">
 <a id="sobreNos" class="nav-link" href="/sobre-nos">Sobre Nós </a>
 </li>`
 
+var participantes = `<li class="nav-item">
+<a id="participante" class="nav-link" href="/participantes">Participantes </a>
+</li>`
+
 var paredoesNav = `<li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
   aria-haspopup="true" aria-expanded="false">
@@ -40,8 +44,8 @@ var navbar1 = `
 </div>
 `
 
-$(function () {
-  $("#nav").html(navbar1)
+$(function() {
+    $("#nav").html(navbar1)
 })
 
 // https://script.google.com/macros/s/AKfycbxEivVIGQ84tnZTYOcB6TeP4kdp522bzbQW9G1fL7WlfzrYKDM/exec
@@ -49,22 +53,22 @@ $(function () {
 
 
 
-transpose = m => m[0].map((x,i) => m.map(x => x[i]))
+transpose = m => m[0].map((x, i) => m.map(x => x[i]))
 
 
-function addParedoes(ultimoDado){
+function addParedoes(ultimoDado) {
 
-  var paredao = ultimoDado[1]+1
-  
-  var pp = []
-  for(i = 1; i < paredao; i++){
-    pp.push(i)
-  }
+    var paredao = ultimoDado[1] + 1
 
-  var pp0 = ""
-    pp.forEach(function (x) {
-      var text = "Paredão "+x
-      pp0 = pp0 + `<a class="dropdown-item" href="/?${x}" paredao=${x}> ${text}</a> `
+    var pp = []
+    for (i = 1; i < paredao; i++) {
+        pp.push(i)
+    }
+
+    var pp0 = ""
+    pp.forEach(function(x) {
+        var text = "Paredão " + x
+        pp0 = pp0 + `<a class="dropdown-item" href="/?${x}" paredao=${x}> ${text}</a> `
     })
 
     $("#paredoesAtualizar").html(pp0)

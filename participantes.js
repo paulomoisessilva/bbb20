@@ -9,13 +9,18 @@ $(function() {
         var template = ""
         data0.forEach(x => {
             var atv = ""
+            var res0 = ""
+            var class0 = ""
             if (x[6] == "Ativo") {
                 atv = "dotActive"
+                class0 = x[5]
             } else {
                 atv = "dotInactive"
+                res0 = `<h5>${x[8]}<\h5>`
+                class0 = "inativo"
             }
 
-            template += `<div class="col row p-5 text-center center-block ${x[5]}">
+            template += `<div class="col row p-5 text-center center-block ${class0}">
     <div class="col-12 d-flex justify-content-center">
         <div class="imagem-participante shadow">
             <img src="${x[1]}" alt="">
@@ -26,6 +31,7 @@ $(function() {
         <h2>${x[2]} anos</h2>
         <h5>${x[4]}</h5>
         <h4>${x[3]}</h4>
+        ${res0}
     </div>
 </div>`
         });

@@ -35,3 +35,11 @@
     margin: 15px !important;
     border-radius: 15px;
 }
+
+.inativo {
+    -webkit-box-shadow: 0 0 5px rgb(166, 166, 166);
+    -moz-box-shadow: 0 0 5px rgb(166, 166, 166);
+    box-shadow: 0 0 5px rgb(166, 166, 166);
+    margin: 15px !important;
+    border-radius: 15px;
+}
