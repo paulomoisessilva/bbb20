@@ -38,6 +38,7 @@ var navbar1 = `
     ${inicioNav}
     ${metodologiaNav}
     ${sobreNos}
+    ${participantes}
     ${paredoesNav}
     </ul>
     <a href="https://twitter.com/pmsilvapm2?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @pmsilvapm2</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
