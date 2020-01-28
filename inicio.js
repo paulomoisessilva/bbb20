@@ -272,6 +272,124 @@ function addDadosGrafico(dados, paredao) {
     });
 }
 
+
+function addDadosGrafico2(dados, paredao) {
+
+    var d1 = dados.filter(function(x) {
+        return x[1] == paredao
+    })
+    var d0 = transpose(d1)
+    console.log(d0)
+    var p1 = (d0[11]).map(function(x) { return (Math.round(x * 1000) / 10) })
+    var p2 = (d0[14]).map(function(x) { return (Math.round(x * 1000) / 10) })
+    var p3 = (d0[17]).map(function(x) { return (Math.round(x * 1000) / 10) })
+    var p4 = (d0[23]).map(function(x) { return (Math.round(x * 1000) / 10) })
+    var p5 = (d0[29]).map(function(x) { return (Math.round(x * 1000) / 10) })
+
+    var dadoP1 = {
+        label: d0[3][0],
+        data: p1,
+        backgroundColor: [
+            'rgba(141,182,75, 0.2)'
+        ],
+        borderColor: [
+            'rgba(141,182,75, 1)'
+        ],
+        borderWidth: 1
+    }
+
+    var dadoP2 = {
+        label: d0[6][0],
+        data: p2,
+        backgroundColor: [
+            'rgba(66,179,198, 0.2)'
+        ],
+        borderColor: [
+            'rgba(66,179,198, 1)'
+        ],
+        borderWidth: 1
+    }
+
+    var dadoP3 = {
+        label: d0[9][0],
+        data: p3,
+        backgroundColor: [
+            'rgba(228,109,103, 0.2)'
+        ],
+        borderColor: [
+            'rgba(228,109,103, 1)'
+        ],
+        borderWidth: 1
+    }
+
+    var dadoP4 = {
+        label: d0[21][0],
+        data: p4,
+        backgroundColor: [
+            'rgba(138, 0, 230, 0.2)'
+        ],
+        borderColor: [
+            'rgba(138, 0, 230, 1)'
+        ],
+        borderWidth: 1
+    }
+
+    var dadoP5 = {
+        label: d0[26][0],
+        data: p5,
+        backgroundColor: [
+            'rgba(230, 184, 0, 0.2)'
+        ],
+        borderColor: [
+            'rgba(230, 184, 0, 1)'
+        ],
+        borderWidth: 1
+    }
+    var dadosGT = [dadoP1, dadoP2]
+
+    if (d0[9][0]) {
+        dadosGT.push(dadoP3)
+    }
+
+    if (d0[21][0]) {
+        dadosGT.push(dadoP4)
+    }
+
+    if (d0[26][0]) {
+        dadosGT.push(dadoP5)
+    }
+
+    var datas0 = (d0[0]).map(function(x) {
+        var y = new Date(x)
+        return (y.toLocaleString())
+    })
+
+    if (datas0.length < 6) {
+        for (i = (datas0.length + 1); i < 7; i++) {
+            datas0.push("")
+        }
+    }
+
+    window.dadosGrafico1 = dadosGT
+
+    var ctx1 = document.getElementById('myChart1').getContext('2d');
+    var myChart1 = new Chart(ctx1, {
+        type: 'line',
+        data: {
+            labels: datas,
+            datasets: dadosGrafico1
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+}
 // $(function () {
 //   $.getJSON("https://script.google.com/macros/s/AKfycbxEivVIGQ84tnZTYOcB6TeP4kdp522bzbQW9G1fL7WlfzrYKDM/exec?func=get", function (data) {
 //     var nome = Object.keys(data)[0]
@@ -320,6 +438,7 @@ $(function() {
             addParedoes(ultimo1)
             addCards(ultimo)
             addDadosGrafico(dados, dado0)
+            addDadosGrafico2(dados, dado0)
 
         })
     } else {
@@ -338,6 +457,7 @@ $(function() {
             addParedoes(ultimo)
             addCards(ultimo)
             addDadosGrafico(dados, ultimo[1])
+            addDadosGrafico2(dados, ultimo[1])
         })
     }
 })
